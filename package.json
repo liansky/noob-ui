@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack --config build/webpack.base.config.js --hide-modules --progress --mode production",
     "server": "node build/dev-server.js",
-    "build": "webpack --config build/webpack.prod.config.js --hide-modules --progress --mode production",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.config.js --hide-modules --progress --mode production",
+    "report": "npm run build --report",
     "start": "webpack-dev-server --inline --progress --config build/webpack.dev.config.js --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -10,9 +10,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const devWebpackConfig = merge(baseWebpackConfig, {
+const prodWebpackConfig = merge(baseWebpackConfig, {
   plugins: [
-    new CleanWebpackPlugin(['dist']), // 清除生产目录
+    new CleanWebpackPlugin([config.build.assetsRoot]), // 清除生产目录
 
     // 参考 https://github.com/kangax/html-minifier#options-quick-reference
     new HtmlWebpackPlugin({
@@ -46,8 +46,23 @@ const devWebpackConfig = merge(baseWebpackConfig, {
           priority: -10
         }
       }
-    })
+    }),
+
+    // 复制
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../static'),
+        to: config.build.assetsSubDirectory,
+        ignore: ['.*']
+      }
+    ])
   ]
 });
 
-module.exports = devWebpackConfig;
+
+if (config.build.bundleAnalyzerReport) {
+  const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+  prodWebpackConfig.plugins.push(new BundleAnalyzerPlugin())
+}
+
+module.exports = prodWebpackConfig;
