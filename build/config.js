@@ -10,10 +10,7 @@ module.exports = {
     port: 8080,
     autoOpenBrowser: false,
     errorOverlay: true,
-    notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
-    useEslint: true,
-    showEslintErrorsInOverlay: false,
     devtool: 'cheap-module-eval-source-map',
     cacheBusting: true,
     cssSourceMap: true

@@ -5,14 +5,38 @@ const path = require('path');
 const webpack = require('webpack');
 const config = require('./config');
 const merge = require('webpack-merge');
-const baseWebpackConfig = require('./webpack.base.config');
+const baseWebpackConfig = require('./webpack.base.conf');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const utils = require('./utils');
+
 
 const prodWebpackConfig = merge(baseWebpackConfig, {
+  module: {
+    rules: utils.styleLoaders({
+      sourceMap: config.build.productionSourceMap,
+      extract: true,
+      usePostCSS: true
+    })
+  },
+
+  devtool: config.build.productionSourceMap ? config.build.devtool : false,
+
+  output: {
+    path: config.build.assetsRoot,
+    filename: utils.assetsPath('js/[name].[chunkhash].js'),
+    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+  },
+
   plugins: [
     new CleanWebpackPlugin([config.build.assetsRoot]), // 清除生产目录
+
+    // 将js中引入的css分离的插件
+    new ExtractTextPlugin({
+      filename: utils.assetsPath('css/[name].[contenthash].css')
+    }),
 
     // 参考 https://github.com/kangax/html-minifier#options-quick-reference
     new HtmlWebpackPlugin({

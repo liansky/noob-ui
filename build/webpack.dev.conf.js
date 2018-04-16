@@ -1,16 +1,22 @@
 /**
  * webpack dev配置
  */
-// const path = require('path');
 const webpack = require('webpack');
 const config = require('./config');
 const merge = require('webpack-merge');
-const baseWebpackConfig = require('./webpack.base.config');
+const baseWebpackConfig = require('./webpack.base.conf');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
-const portfinder = require('portfinder');
+const portFinder = require('portfinder');
+const utils = require('./utils');
 
 const devWebpackConfig = merge(baseWebpackConfig, {
+  module: {
+    rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: false })
+  },
+
+  devtool: config.dev.devtool,
+
   devServer: {
     clientLogLevel: 'warning',
     hot: true,
@@ -29,7 +35,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       poll: config.dev.poll,
     }
   },
-  devtool: '#cheap-module-eval-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
 
@@ -43,8 +48,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
 
 module.exports = new Promise((resolve, reject) => {
-  portfinder.basePort = process.env.PORT || config.dev.port
-  portfinder.getPort((err, port) => {
+  portFinder.basePort = process.env.PORT || config.dev.port
+  portFinder.getPort((err, port) => {
     if (err) {
       reject(err)
     } else {
