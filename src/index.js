@@ -1,10 +1,35 @@
-import './styles/reset.scss'
-import Vue from 'vue'
-import React from 'react'
-import test from './test'
+import NavBar from './packages/nav-bar'
+import Button from './packages/button'
+import Cell from './packages/cell'
+import Layout from './packages/layout'
+import List from './packages/list'
+import Loading from './packages/loading'
+import MessageBox from './packages/message-box'
+import Toast from './packages/toast'
 
-console.log(Vue)
+const noobComponents = {
+  NavBar,
+  Button,
+  Cell,
+  Layout,
+  List,
+  Loading,
+  MessageBox,
+  Toast
+}
 
-console.log(React)
+const install = function (Vue, opt) {
+  if (install.installed) return
 
-console.log(test.name)
+  Object.keys(noobComponents).forEach(key => {
+    Vue.component(key, noobComponents[key])
+  })
+}
+
+const Noob = {
+  version: process.env.VERSION,
+  install,
+  ...noobComponents
+}
+
+export default Noob

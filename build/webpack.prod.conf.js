@@ -45,7 +45,7 @@ const prodWebpackConfig = merge(baseWebpackConfig, {
     // 参考 https://github.com/kangax/html-minifier#options-quick-reference
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/index.html',
+      template: './examples/index.html',
       inject: true,
       minify: {                       // 压缩配置
         removeComments: true,         // 删除html中的注释代码

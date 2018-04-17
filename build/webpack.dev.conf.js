@@ -40,7 +40,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/index.html',
+      template: './examples/index.html',
       inject: true
     })
   ]
