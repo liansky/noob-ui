@@ -8,7 +8,7 @@ module.exports = {
     proxyTable: {},
     host: 'localhost',
     port: 8080,
-    autoOpenBrowser: true,
+    autoOpenBrowser: false,
     errorOverlay: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
     devtool: 'cheap-module-eval-source-map',
@@ -18,12 +18,11 @@ module.exports = {
 
   build: {
     index: path.resolve(__dirname, '../dist/index.html'),
-
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
 
-    productionSourceMap: true,
+    productionSourceMap: false,
     devtool: '#source-map',
 
     // npm install --save-dev compression-webpack-plugin

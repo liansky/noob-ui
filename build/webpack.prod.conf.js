@@ -10,6 +10,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ModuleConcatenationPlugin = require('webpack/lib/optimize/ModuleConcatenationPlugin');
 const utils = require('./utils');
 
 
@@ -31,11 +32,14 @@ const prodWebpackConfig = merge(baseWebpackConfig, {
   },
 
   plugins: [
-    new CleanWebpackPlugin([config.build.assetsRoot]), // 清除生产目录
+    new CleanWebpackPlugin(['dist/**/*.*']), // 清除生产目录
+
+    // 开启 Scope Hoisting
+    new ModuleConcatenationPlugin(),
 
     // 将js中引入的css分离的插件
     new ExtractTextPlugin({
-      filename: utils.assetsPath('css/[name].[contenthash].css')
+      filename: utils.assetsPath('css/[name].[chunkhash].css')
     }),
 
     // 参考 https://github.com/kangax/html-minifier#options-quick-reference
