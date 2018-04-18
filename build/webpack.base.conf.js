@@ -5,6 +5,7 @@ const path = require('path');
 const webpack = require('webpack');
 const utils = require('./utils');
 const config = require('./config');
+const pkg = require('../package.json');
 const isProduction = process.env.NODE_ENV === 'production';
 const sourceMapEnabled = isProduction ? config.build.productionSourceMap : config.dev.cssSourceMap;
 
@@ -14,13 +15,6 @@ function resolve (dir) {
 }
 
 module.exports = {
-  entry: {
-    app: './examples/main.js'
-  },
-  output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: '[name].js'
-  },
   resolve: {
     extensions: ['.js', '.vue', '.json', 'scss', 'sass'],
     alias: {
@@ -100,7 +94,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        VERSION: `'${pkg.version}'`
       }
     })
   ]

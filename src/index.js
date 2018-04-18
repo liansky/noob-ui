@@ -1,3 +1,5 @@
+import './styles/index.scss'
+
 import NavBar from './packages/nav-bar'
 import Button from './packages/button'
 import Cell from './packages/cell'
@@ -9,16 +11,17 @@ import Toast from './packages/toast'
 
 const noobComponents = {
   NavBar,
-  Button,
   Cell,
   Layout,
   List,
   Loading,
   MessageBox,
-  Toast
+  Toast,
+  NButton: Button
 }
 
-const install = function (Vue, opt) {
+
+const install = function (Vue, opt = {}) {
   if (install.installed) return
 
   Object.keys(noobComponents).forEach(key => {
@@ -26,10 +29,17 @@ const install = function (Vue, opt) {
   })
 }
 
+
+// 自动安装
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue)
+}
+
 const Noob = {
   version: process.env.VERSION,
   install,
   ...noobComponents
 }
+
 
 export default Noob

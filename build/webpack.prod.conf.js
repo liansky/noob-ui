@@ -1,9 +1,10 @@
 /**
- * webpack 生产配置
+ * webpack examples 生产配置
  */
 const path = require('path');
 const webpack = require('webpack');
 const config = require('./config');
+const utils = require('./utils');
 const merge = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.conf');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -11,10 +12,21 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ModuleConcatenationPlugin = require('webpack/lib/optimize/ModuleConcatenationPlugin');
-const utils = require('./utils');
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 
 
 const prodWebpackConfig = merge(baseWebpackConfig, {
+    entry: {
+      app: './examples/main.js'
+    },
+    output: {
+      // 输出文件夹
+      path: config.build.assetsRoot,
+      filename: '[name].js',
+      // 配置静态资源cdn路径, 默认为开发配置
+      publicPath: '/'
+    }
+  }, {
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
@@ -42,6 +54,12 @@ const prodWebpackConfig = merge(baseWebpackConfig, {
       filename: utils.assetsPath('css/[name].[chunkhash].css')
     }),
 
+    new OptimizeCSSPlugin({
+      cssProcessorOptions: {
+        safe: true
+      }
+    }),
+
     // 参考 https://github.com/kangax/html-minifier#options-quick-reference
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -67,7 +85,7 @@ const prodWebpackConfig = merge(baseWebpackConfig, {
         default: {
           minChunks: 2,
           priority: -20,
-          reuseExistingChunk: true,
+          reuseExistingChunk: true
         },
         vendors: {
           test: /[\\/]node_modules[\\/]/,

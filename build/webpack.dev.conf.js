@@ -1,6 +1,7 @@
 /**
- * webpack dev配置
+ * webpack examples dev配置
  */
+const path = require('path');
 const webpack = require('webpack');
 const config = require('./config');
 const merge = require('webpack-merge');
@@ -11,6 +12,9 @@ const portFinder = require('portfinder');
 const utils = require('./utils');
 
 const devWebpackConfig = merge(baseWebpackConfig, {
+  entry: {
+    app: './examples/main.js'
+  },
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
   },

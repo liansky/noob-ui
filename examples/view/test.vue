@@ -1,19 +1,22 @@
 <template>
-  <div class="hello">
+  <div class="test">
     <nav-bar></nav-bar>
-    <button></button>
+    <n-button></n-button>
     <cell></cell>
     <layout></layout>
+    <list></list>
+    <message-box></message-box>
+    <toast></toast>
+    <loading></loading>
   </div>
 </template>
 
 <script>
-
   export default {
-    name: 'HelloWorld',
+    name: 'test',
     data () {
       return {
-        msg: 'Welcome to Your Vue.js App'
+
       }
     }
   }

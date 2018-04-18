@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  name: 'button',
+  name: 'n-button',
 
   data () {
     return {}
@@ -41,6 +41,6 @@ export default {
 
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  @import "../../styles/button";
 </style>

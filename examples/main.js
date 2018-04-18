@@ -1,4 +1,4 @@
-import '../src/styles/reset.scss'
+import '../src/styles/index.scss'
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'

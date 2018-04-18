@@ -43,5 +43,6 @@ public/doc
 node_modules
 tpl.json
 docs
-test
-dist
+test/
+dist/
+examples/dist/
