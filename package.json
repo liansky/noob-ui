@@ -11,6 +11,7 @@
     "build:dev": "cross-env NODE_ENV=development webpack --config build/webpack.build.conf.js --hide-modules --progress --mode development",
     "build:pro": "cross-env NODE_ENV=production webpack --config build/webpack.build.conf.js --hide-modules --progress --mode production",
     "build": "npm run build:dev && npm run build:pro",
+    "prepublish": "npm run build",
     "report": "npm run build:pro --report",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
