@@ -8,7 +8,7 @@ module.exports = {
     proxyTable: {},
     host: 'localhost',
     port: 8080,
-    autoOpenBrowser: false,
+    autoOpenBrowser: true,
     errorOverlay: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
     devtool: 'cheap-module-eval-source-map',

@@ -3,15 +3,16 @@
   "version": "0.0.1",
   "description": "noob-ui",
   "main": "dist/noob.js",
-  "module": "dist/noob.esm.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --mode development",
     "start": "npm run dev",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --mode development",
     "pro": "cross-env NODE_ENV=production webpack --config build/webpack.prod.conf.js --hide-modules --progress --mode production",
     "build:dev": "cross-env NODE_ENV=development webpack --config build/webpack.build.conf.js --hide-modules --progress --mode development",
     "build:pro": "cross-env NODE_ENV=production webpack --config build/webpack.build.conf.js --hide-modules --progress --mode production",
     "build": "npm run build:dev && npm run build:pro",
     "prepublish": "npm run build",
+    "clean": "rimraf ./dist && mkdir dist",
+    "prebuild": "npm run clean",
     "report": "npm run build:pro --report",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

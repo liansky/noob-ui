@@ -1,6 +1,6 @@
 <template>
-  <div>
-    layout
+  <div class="noob-layout">
+   <slot></slot>
   </div>
 </template>
 
@@ -38,6 +38,3 @@ export default {
   methods: {}
 }
 </script>
-
-<style lang="scss">
-</style>

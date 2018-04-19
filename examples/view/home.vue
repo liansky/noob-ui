@@ -1,19 +1,18 @@
 <template>
-  <div class="test">
+  <layout>
     <nav-bar></nav-bar>
     <n-button></n-button>
     <cell></cell>
-    <layout></layout>
     <list></list>
     <message-box></message-box>
     <toast></toast>
     <loading></loading>
-  </div>
+  </layout>
 </template>
 
 <script>
   export default {
-    name: 'test',
+    name: 'home',
     data () {
       return {
 
