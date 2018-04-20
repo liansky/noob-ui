@@ -42,5 +42,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../../styles/button";
+  @import "../../styles/packages/button";
 </style>

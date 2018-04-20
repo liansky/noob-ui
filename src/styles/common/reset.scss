@@ -1,0 +1,199 @@
+/* reset */
+
+
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+html {
+  font-family: $font-family;
+  /* 1 */
+  line-height: $line-height-base;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: $body-bg-color;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: $font-size-base;
+  outline: 0;
+  color: $base-color;
+}
+
+a, button {
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+a,
+img,
+button,
+div,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+input,
+li,
+menu,
+ol,
+p,
+textarea,
+ul,
+figure,
+dl,
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+li,
+ol,
+ul,
+dl,
+dt,
+dd {
+  list-style: none
+}
+
+b,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+th,
+td {
+  font-weight: 400;
+  font-style: normal
+}
+
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+button,
+input,
+select,
+textarea,
+img {
+  outline: 0;
+  color: #000;
+}
+
+button,
+input[type=button],
+input[type=password],
+input[type=submit],
+input[type=text],
+textarea {
+  -webkit-appearance: none;
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+img,
+video {
+  vertical-align: middle;
+  border: 0;
+  border-style: none;
+}
+
+
+/**
+    pc
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}

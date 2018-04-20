@@ -6,7 +6,6 @@
     <list></list>
     <message-box></message-box>
     <toast></toast>
-    <loading></loading>
   </layout>
 </template>
 

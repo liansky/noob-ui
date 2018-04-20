@@ -1,0 +1,34 @@
+$layout-prefix-cls: "#{$css-prefix}-layout";
+
+.#{$layout-prefix-cls} {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $body-bg-color;
+  display: flex;
+  flex-direction: column;
+
+  &-header {
+    height: 100px;
+    background-color: #fff;
+    line-height: 100px;
+    font-size: 34px;
+  }
+
+  &-content {
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &-footer {
+    height: 98px;
+    background-color: $primary-color;
+    line-height: 98px;
+    color: #fff;
+    font-size: 36px;
+  }
+}
