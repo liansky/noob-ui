@@ -1,10 +1,12 @@
 <template>
   <div>
-    nav-bar
+    <icon type="icon-edit" color="blue" size=".34rem"></icon>
   </div>
 </template>
 
 <script>
+
+import Icon from '../icon/icon.vue'
 
 export default {
   name: 'nav-bar',
@@ -17,7 +19,9 @@ export default {
 
   computed: {},
 
-  components: {},
+  components: {
+    Icon
+  },
 
 
   watch: {},

@@ -1,0 +1,64 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20120731 at Wed Jul 19 18:05:59 2017
+ By admin
+</metadata>
+<defs>
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face 
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    panose-1="2 0 6 3 0 0 0 0 0 0"
+    ascent="896"
+    descent="-128"
+    x-height="792"
+    bbox="0 -128 1075 896"
+    underline-thickness="0"
+    underline-position="0"
+    unicode-range="U+0078-E7C7"
+  />
+<missing-glyph 
+ />
+    <glyph glyph-name=".notdef" 
+ />
+    <glyph glyph-name=".notdef" 
+ />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="341" 
+ />
+    <glyph glyph-name="x" unicode="x" horiz-adv-x="1001" 
+d="M281 543q-27 -1 -53 -1h-83q-18 0 -36.5 -6t-32.5 -18.5t-23 -32t-9 -45.5v-76h912v41q0 16 -0.5 30t-0.5 18q0 13 -5 29t-17 29.5t-31.5 22.5t-49.5 9h-133v-97h-438v97zM955 310v-52q0 -23 0.5 -52t0.5 -58t-10.5 -47.5t-26 -30t-33 -16t-31.5 -4.5q-14 -1 -29.5 -0.5
+t-29.5 0.5h-32l-45 128h-439l-44 -128h-29h-34q-20 0 -45 1q-25 0 -41 9.5t-25.5 23t-13.5 29.5t-4 30v167h911zM163 247q-12 0 -21 -8.5t-9 -21.5t9 -21.5t21 -8.5q13 0 22 8.5t9 21.5t-9 21.5t-22 8.5zM316 123q-8 -26 -14 -48q-5 -19 -10.5 -37t-7.5 -25t-3 -15t1 -14.5
+t9.5 -10.5t21.5 -4h37h67h81h80h64h36q23 0 34 12t2 38q-5 13 -9.5 30.5t-9.5 34.5q-5 19 -11 39h-368zM336 498v228q0 11 2.5 23t10 21.5t20.5 15.5t34 6h188q31 0 51.5 -14.5t20.5 -52.5v-227h-327z" />
+    <glyph glyph-name="jiagepaixu" unicode="&#xe642;" horiz-adv-x="1028" 
+d="M451 -128q-19 0 -40.5 9t-36.5 23l-345 346q-29 28 -29 74t29 79l448 448q32 32 77 32l371 13q45 0 77 -32q25 -26 25 -77l-13 -358q0 -20 -8.5 -41.5t-23.5 -35.5l-448 -448q-42 -32 -83 -32zM925 832l-359 -13q-19 0 -32 -13l-448 -448q-14 -14 -14 -31.5t14 -32.5
+l346 -345q10 -10 30 -10t34 10l448 448q13 13 13 32l6 358q0 6 -1.5 10.5t-5.5 11.5t-6 10q-12 13 -25 13zM701 429q-58 0 -96 38q-45 56 -45 103q0 51 45 96q38 38 95.5 38t96 -38.5t38.5 -96t-38 -95.5q-45 -45 -96 -45zM701 640q-32 0 -51 -19q-26 -26 -26 -51
+q0 -32 19 -51.5t51 -19.5t51.5 19.5t19.5 51.5t-19 51q-10 19 -45 19z" />
+    <glyph glyph-name="bianjix" unicode="&#xe7bc;" 
+d="M1024 -128h-1024v1024h632v-60h-572v-904h904v512h60v-572zM982 896l42 -43l-596 -596l-43 43z" />
+    <glyph glyph-name="duigouweixuanzhongx" unicode="&#xe7bb;" 
+d="M512 -128q-138 0 -256 69t-187 187t-69 256t69 256t187 187t256 69t256 -69t187 -187t69 -256t-69 -256t-187 -187t-256 -69zM512 864q-199 0 -339.5 -140.5t-140.5 -339.5t140.5 -339.5t339.5 -140.5t339.5 140.5t140.5 339.5t-140.5 339.5t-339.5 140.5z" />
+    <glyph glyph-name="dizhishanchux" unicode="&#xe7bd;" horiz-adv-x="1075" 
+d="M0 717h1075v-51h-1075v51zM742 666h-384v25h-25v205h384v-26h25v-204zM384 717h307v128h-307v-128zM205 538v-666h-51v666h51zM691 538v-666h-51v666h51zM435 538v-666h-51v666h51zM922 538v-666h-52v666h52zM154 -77h742v-51h-742v51z" />
+    <glyph glyph-name="duigouxuanzhongx" unicode="&#xe7be;" 
+d="M512 896q-104 0 -198.5 -40.5t-163.5 -109.5t-109.5 -163.5t-40.5 -198.5t40.5 -198.5t109.5 -163t163.5 -109.5t198.5 -41t198.5 41t163 109.5t109.5 163t41 198.5t-41 198.5t-109.5 163.5t-163 109.5t-198.5 40.5zM438 128l-35 35l-163 163l70 71l128 -128l301 301
+l70 -71z" />
+    <glyph glyph-name="xiangyoujiantoux" unicode="&#xe7bf;" 
+d="M282 896l-52 -56l441 -456l-441 -456l52 -56l491 512z" />
+    <glyph glyph-name="shurukuangshanchux" unicode="&#xe7c0;" 
+d="M512 426l-170 169l-41 -41l169 -170l-169 -170l41 -41l170 169l170 -169l41 41l-169 170l169 170l-41 41zM512 -128q-138 0 -256 69t-187 187t-69 256t69 256t187 187t256 69t256 -69t187 -187t69 -256t-69 -256t-187 -187t-256 -69z" />
+    <glyph glyph-name="xiangshang-" unicode="&#xe7c1;" 
+d="M0 147l58 -51l454 474l461 -474l51 51l-512 525z" />
+    <glyph glyph-name="xiangxia" unicode="&#xe7c2;" 
+d="M1024 621l-58 51l-454 -474l-461 474l-51 -51l512 -525z" />
+    <glyph glyph-name="biaotifanhui" unicode="&#xe7c6;" 
+d="M723 896l-454 -448l-45 -45l45 -45l454 -448l45 45l-454 448l454 448z" />
+    <glyph glyph-name="biaotiguanbi" unicode="&#xe7c7;" horiz-adv-x="1027" 
+d="M982 896l-451 -451l-454 451l-45 -45l451 -454l-451 -451l45 -45l454 451l451 -451l45 45l-451 451l451 454z" />
+  </font>
+</defs></svg>

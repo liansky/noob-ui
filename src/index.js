@@ -8,6 +8,7 @@ import List from './packages/list'
 import Loading from './packages/loading'
 import MessageBox from './packages/message-box'
 import Toast from './packages/toast'
+import Icon from './packages/icon'
 
 const noobComponents = {
   NavBar,
@@ -17,6 +18,7 @@ const noobComponents = {
   Loading,
   MessageBox,
   Toast,
+  Icon,
   NButton: Button
 }
 
@@ -35,11 +37,11 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-const Noob = {
+const NoobUI = {
   version: process.env.VERSION,
   install,
   ...noobComponents
 }
 
 
-export default Noob
+export default NoobUI

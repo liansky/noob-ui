@@ -1,53 +1,89 @@
 <template>
   <div :class="prefixCls">
-    <header :class="`${prefixCls}-header`">
-      <slot name="header">
-        <div>头部</div>
-      </slot>
+    <header
+      :class="`${prefixCls}-header`"
+      :style="{
+        backgroundColor: headerBg,
+        color: headerBg === '#fff' ? '#2d2f46' : '#fff'
+      }"
+      ref="header"
+    >
+      <div :style="{height: `${placeholderHeight}px`}"></div>
+      <slot name="header"></slot>
     </header>
-    <section :class="`${prefixCls}-content`">
-      <slot></slot>
+    <section
+      :class="`${prefixCls}-content`"
+      :style="{
+        paddingTop: `${contentTop}px`,
+        paddingBottom: `${contentBottom}px`,
+        backgroundColor: contentBg,
+      }"
+      ref="section"
+    >
+      <slot/>
     </section>
-    <footer :class="`${prefixCls}-footer`">
-      <slot name="footer">底部</slot>
+    <footer
+      :class="`${prefixCls}-footer`"
+      :style="{
+        backgroundColor: footerBg
+      }"
+      ref="footer">
+      <slot name="footer"></slot>
     </footer>
   </div>
 </template>
 
 <script>
+import { isIOS, isAppEnv, isIphoneX } from '../../utils'
 
 export default {
   name: 'layout',
 
   data () {
     return {
-      prefixCls: 'noob-layout'
+      prefixClsFlex: 'noob-layout-flex',
+      prefixClsAuto: 'noob-layout-auto',
+      contentTop: 0,
+      contentBottom: 0
     }
   },
 
-  props: {},
-
-  computed: {},
-
-  components: {},
-
-
-  watch: {},
-
-  beforeCreate () {
+  props: {
+    headerBg: {
+      type: String,
+      default: '#fff'
+    },
+    contentBg: {
+      type: String,
+      default: '#f6f7f8'
+    },
+    footerBg: {
+      type: String,
+      default: '#fff'
+    }
   },
 
-  created () {
+  computed: {
+    dpr: () => document.documentElement.dataset.dpr,
+
+    placeholderHeight () {
+      if (isIOS && isAppEnv) {
+        return (isIphoneX ? 44 : 20) * this.dpr
+      }
+      return 0
+    },
+    prefixCls () {
+      return isIOS ? this.prefixClsFlex : this.prefixClsAuto
+    }
   },
 
   mounted () {
-
-  },
-
-  destroyed () {
-
-  },
-
-  methods: {}
+    this.$nextTick(() => {
+      if (!isIOS) {
+        this.contentTop = this.$refs.header.offsetHeight || 0
+        this.contentBottom = this.$refs.footer.offsetHeight || 0
+      }
+    })
+  }
 }
 </script>

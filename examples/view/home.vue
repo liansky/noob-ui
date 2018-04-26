@@ -1,6 +1,6 @@
 <template>
-  <layout>
-    <nav-bar></nav-bar>
+  <layout headerBg="#fff">
+    <nav-bar slot="header"></nav-bar>
     <n-button></n-button>
     <cell></cell>
     <list></list>
@@ -21,5 +21,7 @@
 </script>
 
 <style scoped>
-
+      .test {
+        height: auto;
+      }
 </style>

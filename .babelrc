@@ -3,7 +3,11 @@
     ["env", { "modules": false }],
     "stage-2"
   ],
-  "plugins": ["transform-runtime"],
+  "plugins": [["transform-runtime", "import", {
+    "libraryName": "noob-ui",
+    "libraryDirectory": "src/packages",
+    "style": true
+  }]],
   "comments": false,
   "env": {
     "test": {

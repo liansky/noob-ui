@@ -1,0 +1,36 @@
+
+@font-face {font-family: 'noob-icon';
+  src: url('iconfont.woff?t=1500458759977') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1500458759977') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1500458759977#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.noob-icon {
+  font-family: 'noob-icon' !important;
+  font-size: 32px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-label:before { content: "\e642"; }
+
+.icon-edit:before { content: "\e7bc"; }
+
+.icon-check-o:before { content: "\e7bb"; }
+
+.icon-del:before { content: "\e7bd"; }
+
+.icon-check-s:before { content: "\e7be"; }
+
+.icon-right:before { content: "\e7bf"; }
+
+.icon-clear:before { content: "\e7c0"; }
+
+.icon-up:before { content: "\e7c1"; }
+
+.icon-down:before { content: "\e7c2"; }
+
+.icon-left:before { content: "\e7c6"; }
+
+.icon-close:before { content: "\e7c7"; }

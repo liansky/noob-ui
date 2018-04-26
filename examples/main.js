@@ -1,11 +1,10 @@
-import '../src/styles/index.scss'
+// import '../src/styles/index.scss'
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import Noob from '../src'
+import NoobUI from '../src/index'
 
-
-Vue.use(Noob)
+Vue.use(NoobUI)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

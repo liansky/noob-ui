@@ -1,21 +1,14 @@
-$layout-prefix-cls: "#{$css-prefix}-layout";
+$layout-prefix-cls-flex: "#{$css-prefix}-layout-flex";
+$layout-prefix-cls-auto: "#{$css-prefix}-layout-auto";
 
-.#{$layout-prefix-cls} {
+.#{$layout-prefix-cls-flex} {
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   width: 100%;
-  background-color: $body-bg-color;
   display: flex;
   flex-direction: column;
-
-  &-header {
-    height: 100px;
-    background-color: #fff;
-    line-height: 100px;
-    font-size: 34px;
-  }
 
   &-content {
     flex: 1;
@@ -23,12 +16,22 @@ $layout-prefix-cls: "#{$css-prefix}-layout";
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   }
+}
+
+
+.#{$layout-prefix-cls-auto} {
+
+  &-header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
 
   &-footer {
-    height: 98px;
-    background-color: $primary-color;
-    line-height: 98px;
-    color: #fff;
-    font-size: 36px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
   }
 }
