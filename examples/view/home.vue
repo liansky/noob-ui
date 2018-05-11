@@ -1,6 +1,7 @@
 <template>
   <layout headerBg="#fff">
-    <nav-bar slot="header"></nav-bar>
+    <nav-bar slot="header" :backBtnHide="true">
+    </nav-bar>
     <n-button></n-button>
     <cell></cell>
     <list></list>
@@ -16,12 +17,13 @@
       return {
 
       }
+    },
+    methods: {
+
     }
   }
 </script>
 
 <style scoped>
-      .test {
-        height: auto;
-      }
+
 </style>

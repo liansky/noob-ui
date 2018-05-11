@@ -17,7 +17,8 @@ module.exports = {
     "Vue":true,
     "$": true,
     "event":true,
-    "history":true
+    "history":true,
+    "Navigation":true
   },
   'rules': {
     // allow paren-less arrow functions

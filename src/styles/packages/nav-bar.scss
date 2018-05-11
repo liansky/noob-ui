@@ -1,0 +1,55 @@
+$nav-bar-prefix-cls: "#{$css-prefix}-nav-bar";
+
+.#{$nav-bar-prefix-cls} {
+  position: relative;
+  height: 88px;
+  line-height: 88px;
+
+  &-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    height: inherit;
+    button {
+      display: block;
+      height: inherit;
+      color: inherit;
+      font-size: inherit;
+      padding: 0 30px;
+      background-color: transparent;
+      appearance: none;
+    }
+    i {
+      font-size: 32px;
+      color: $title-color;
+    }
+  }
+
+  &-center {
+    text-align: center;
+    height: inherit;
+    line-height: inherit;
+    font-size: 34px;
+    margin: 0 1.2rem;
+    overflow: hidden;
+    @include text-overflow;
+  }
+
+  &-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: inherit;
+    button {
+      display: block;
+      height: inherit;
+      color: inherit;
+      font-size: inherit;
+      padding: 0 .3rem;
+      background-color: transparent;
+      appearance: none;
+    }
+  }
+}

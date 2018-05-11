@@ -9,7 +9,7 @@ module.exports = {
       unitPrecision: 5,
       replace: true,
       ignoreIdentifier: false,
-      minPixelValue: 0
+      minPixelValue: 2
     }
   }
 }

@@ -1,0 +1,24 @@
+// 解决钱包app iPhone6 高清1px方案问题
+@mixin border($width, $style, $color, $align) {
+  @if $align=='' {
+    border: $width $style $color;
+    @media screen and (width: 375px) {
+      border: $width/2 $style $color;
+    }
+  }
+  @else {
+    border-#{$align}: $width $style $color;
+    @media screen and (width: 375px) {
+      border-#{$align}: $width/2 $style $color;
+    }
+  }
+}
+
+@mixin text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+
