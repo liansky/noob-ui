@@ -1,0 +1,9 @@
+$prefixClass: "#{$css-prefix}-list";
+
+.#{$prefixClass} {
+  background-color: #fff;
+  margin: 20px 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

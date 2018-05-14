@@ -1,0 +1,87 @@
+$prefixClass: "#{$css-prefix}-cell";
+
+.#{$prefixClass} {
+  box-sizing: border-box;
+  background-color: #fff;
+  height: 100px;
+  display: block;
+
+  &-box {
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    @include border(1px, solid, $border-color, 'bottom');
+    margin-left: 40px;
+    padding-right: 40px;
+    height: 100px;
+  }
+
+  &:last-child &-box {
+    border-bottom: none;
+  }
+
+  .link {
+    height: 100px;
+    display: block;
+    box-sizing: border-box;
+    color: $title-color;
+  }
+  .link:visited &-box, a:active &-box {
+    @include border(1px, solid, $border-color, 'bottom');
+  }
+
+  .link:active {
+    background-color: #FBFAFB;
+  }
+
+  .un-feedback {
+    background-color: transparent;
+  }
+
+  &-label {
+    color: $title-color;
+    font-size: 28px;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    user-select:none;
+
+    i {
+      font-size: 36px;
+      margin-right: 30px;
+    }
+    span {
+      margin-right: 40px;
+    }
+  }
+
+  &-main {
+    flex: 1;
+    font-size: 28px;
+    color: #B2B4C6;
+    text-align: right;
+    input {
+      font-size: 28px;
+      padding: 20px 0;
+      display: block;
+      width: 100%;
+      color: $title-color;
+    }
+    input::-webkit-input-placeholder {
+      color: $title-color;
+    }
+
+  }
+
+  &-arrow {
+    i {
+      padding-left: 30px;
+      font-size: 24px;
+      color: $remark-color;
+    }
+  }
+}

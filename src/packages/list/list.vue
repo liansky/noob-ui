@@ -1,45 +1,16 @@
 <template>
-  <div>
-    list
-  </div>
+  <ul :class="prefixClass">
+    <slot></slot>
+  </ul>
 </template>
 
 <script>
-
 export default {
   name: 'list',
-
   data () {
-    return {}
-  },
-
-  props: {},
-
-  computed: {},
-
-  components: {},
-
-
-  watch: {},
-
-  beforeCreate () {
-  },
-
-  created () {
-  },
-
-  mounted () {
-
-  },
-
-  destroyed () {
-
-  },
-
-  methods: {}
+    return {
+      prefixClass: 'noob-list'
+    }
+  }
 }
-
 </script>
-
-<style lang="scss">
-</style>
